@@ -14,6 +14,14 @@ public class MazeGenerator : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject Enemy1;
+
+    public GameObject Enemy2;
+
+    public GameObject Enemy3;
+
+    public GameObject Enemy4;
+
     const int N = 1;
     const int E = 2;
     const int S = 4;
@@ -43,6 +51,18 @@ public class MazeGenerator : MonoBehaviour
 
         GameObject p = GameObject.Instantiate(player);
         p.transform.position = new Vector3(2.91f, 1f, 4.6f);
+
+        GameObject e1 = GameObject.Instantiate(Enemy1);
+        e1.transform.position = new Vector3(40f, 1f, 5f);
+
+        GameObject e2 = GameObject.Instantiate(Enemy2);
+        e2.transform.position = new Vector3(20f, 1f, 20f);
+
+        GameObject e3 = GameObject.Instantiate(Enemy3);
+        e3.transform.position = new Vector3(40f, 1f, 40f);
+
+        GameObject e4 = GameObject.Instantiate(Enemy4);
+        e4.transform.position = new Vector3(5f, 1f, 40f);
     }
 
     private List<Vector2> CheckNeighbors(Vector2 cell, List<Vector2> unvisited) {
